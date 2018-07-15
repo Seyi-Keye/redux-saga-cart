@@ -1,7 +1,8 @@
 import React from 'react'
 import { CartItemContainer } from '../CartItem'
-export const CartItemListDisplay = ({items, fetched})=>(
-    <div>
+export const CartItemListDisplay = ({items, fetched})=>{
+    console.log("I got here", fetched);
+    return <div>
     {fetched ? <div>
             {items.map(item=>(
                 <CartItemContainer {...item.toJS()} key={item.get(`id`)}/>
@@ -11,5 +12,5 @@ export const CartItemListDisplay = ({items, fetched})=>(
             Please wait...
         </div>
     }
-    </div>
-);
+    </div>}
+;
